@@ -24,4 +24,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~5.2.2" />
+	<chcp>
+		<config-file url="http://a34d33b6.ngrok.io/chcp.json"/>
+	</chcp>
 </widget>

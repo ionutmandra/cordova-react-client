@@ -1,15 +1,19 @@
 [
   {
+    "file": "43.html",
+    "hash": "2a0319d6f5a4d93e03b9ba15160351cf"
+  },
+  {
     "file": "css/index.css",
     "hash": "f765916c9cd05bb2741c809fcf20a4e4"
   },
   {
     "file": "dist/js/bundle.js",
-    "hash": "4cb41874f36e32649833f1fa9ba318ef"
+    "hash": "82c9fa092ca0fb55a5637f800dcaf515"
   },
   {
     "file": "dist/js/bundle.js.map",
-    "hash": "ac0bc22d33c5acb2d71c97fd44e5b1ba"
+    "hash": "4789888341872753f2f450fc56f9568d"
   },
   {
     "file": "dist/js/vendor.js",
@@ -21,7 +25,7 @@
   },
   {
     "file": "index.html",
-    "hash": "2c4966a49e0eb34a0bb1f938a686b7a2"
+    "hash": "f1ad6d21215fd95723adc84a74903ea7"
   },
   {
     "file": "js/index.js",

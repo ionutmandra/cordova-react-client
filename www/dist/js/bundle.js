@@ -41802,7 +41802,7 @@ var Login = exports.Login = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'TodoMVC example'
+            'TodoMVC example11'
           )
         ),
         _react2.default.createElement(
