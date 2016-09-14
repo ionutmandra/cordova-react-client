@@ -1,0 +1,34 @@
+[
+  {
+    "file": "43.html",
+    "hash": "2a0319d6f5a4d93e03b9ba15160351cf"
+  },
+  {
+    "file": "css/index.css",
+    "hash": "f765916c9cd05bb2741c809fcf20a4e4"
+  },
+  {
+    "file": "dist/js/bundle.js",
+    "hash": "0b55e698fa447ff71bfdc5cb452c8c59"
+  },
+  {
+    "file": "dist/js/bundle.js.map",
+    "hash": "6d51bed8a929a8474b3cffa3a59a5d01"
+  },
+  {
+    "file": "dist/js/vendor.js",
+    "hash": "1bf88b480d8afb05a7fa497f87dc391b"
+  },
+  {
+    "file": "img/logo.png",
+    "hash": "7e34c95ac701f8cd9f793586b9df2156"
+  },
+  {
+    "file": "index.html",
+    "hash": "9d99e466285adf1421a34e29f0b8a470"
+  },
+  {
+    "file": "js/index.js",
+    "hash": "bb074282ab3cc57333d8f0b2b23e7ff9"
+  }
+]
