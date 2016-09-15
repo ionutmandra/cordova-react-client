@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
 import TodoTextInput from './TodoTextInput.jsx';
 
 export default class TodoItem extends Component {
@@ -57,12 +56,7 @@ export default class TodoItem extends Component {
     }
 
     return (
-      <li
-        className={classnames({
-          completed: todo.marked,
-          editing: this.state.editing
-        })}
-      >
+      <li>
         {element}
       </li>
     );
