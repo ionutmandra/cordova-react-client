@@ -129,6 +129,11 @@ gulp.task('apply-prod-environment', function () {
   process.env.NODE_ENV = 'production';
 });
 
+//gulp.task('deploy', function () {  
+//   return runSequence('apply-prod-environment', 'clean', 'vendor', 'build', 'move-image-files', 'move-site-maps', 'minify-css', 'unit-tests');
+// });
+
 gulp.task('deploy', function () {
-  return runSequence('apply-prod-environment', 'clean', 'vendor', 'build', 'move-image-files', 'move-site-maps', 'minify-css', 'unit-tests');
+  return runSequence('vendor', 'build', 'move-image-files', 'move-site-maps');
 });
+
