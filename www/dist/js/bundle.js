@@ -41802,7 +41802,7 @@ var Login = exports.Login = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'TodoMVC example17'
+            'TodoMVC example25'
           )
         ),
         _react2.default.createElement(
@@ -42136,45 +42136,61 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 _reactDom2.default.render(_react2.default.createElement(
-   _App2.default,
-   null,
-   _react2.default.createElement(_AppRoute2.default, null)
+    _App2.default,
+    null,
+    _react2.default.createElement(_AppRoute2.default, null)
 ), document.getElementById('root'));
 
-// var app = {
-//     // Application Constructor
-//     initialize: function() {
-//         this.bindEvents();
-//     },
-//     // Bind Event Listeners
-//     //
-//     // Bind any events that are required on startup. Common events are:
-//     // 'load', 'deviceready', 'offline', and 'online'.
-//     bindEvents: function() {
-//         document.addEventListener('deviceready', this.onDeviceReady, false);
-//     },
-//     // deviceready Event Handler
-//     //
-//     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-//     // function, we must explicitly call 'app.receivedEvent(...);'
-//     onDeviceReady: function() {
-//         app.receivedEvent('deviceready');
-//     },
-//     // Update DOM on a Received Event
-//     receivedEvent: function(id) {
-//         var parentElement = document.getElementById(id);
-//         var listeningElement = parentElement.querySelector('.listening');
-//         var receivedElement = parentElement.querySelector('.received');
+var app = {
+    // Application Constructor
+    initialize: function initialize() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function bindEvents() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('chcp_updateIsReadyToInstall', this.onUpdateReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function onDeviceReady() {
+        //app.receivedEvent('deviceready');
+    },
+    onUpdateReady: function onUpdateReady() {
+        console.log('onUpdateReady');
+        var a = confirm('up is available. do wyou want it?');
+        if (a) {
+            chcp.installUpdate(app.installationCallback);
+        }
+    },
+    installationCallback: function installationCallback(error) {
+        if (error) {
+            console.log('Failed to install the update with error code: ' + error.code);
+            console.log(error.description);
+        } else {
+            console.log('Update installed!');
+        }
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function receivedEvent(id) {
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-//         listeningElement.setAttribute('style', 'display:none;');
-//         receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
-//         console.log('Received Event 2: ' + id);
+        // console.log('Received Event 2: ' + id);
 
-//     }
-// };
+    }
+};
 
-// app.initialize();
+app.initialize();
 
 },{"./actions":609,"./containers/App.jsx":626,"./containers/AppRoute.jsx":627,"react":573,"react-dom":364,"react-redux":387,"react-router":421}],633:[function(require,module,exports){
 'use strict';

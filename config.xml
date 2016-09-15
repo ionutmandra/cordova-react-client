@@ -25,6 +25,7 @@
     </platform>
     <engine name="android" spec="~5.2.2" />
 	<chcp>
-		<config-file url="http://3283361e.ngrok.io/chcp.json"/>
+		<config-file url="https://ef27d4bf.ngrok.io/chcp.json"/>
+		<auto-install enabled="false" />
 	</chcp>
 </widget>

@@ -32,7 +32,8 @@
   <allow-intent href="geo:*"/>
   <allow-intent href="market:*"/>
   <chcp>
-    <config-file url="https://3283361e.ngrok.io/chcp.json"/>
+    <config-file url="https://ef27d4bf.ngrok.io/chcp.json"/>
+    <auto-install enabled="false"/>
     <local-development enabled="true"/>
   </chcp>
   <preference name="loglevel" value="DEBUG"/>
