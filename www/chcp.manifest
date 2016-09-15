@@ -5,11 +5,11 @@
   },
   {
     "file": "dist/js/bundle.js",
-    "hash": "4cb41874f36e32649833f1fa9ba318ef"
+    "hash": "3bf3f042c24d16b425920c128c11d9f0"
   },
   {
     "file": "dist/js/bundle.js.map",
-    "hash": "ac0bc22d33c5acb2d71c97fd44e5b1ba"
+    "hash": "ec4aa61774f9076bf9b615b05e651331"
   },
   {
     "file": "dist/js/vendor.js",
@@ -21,7 +21,7 @@
   },
   {
     "file": "index.html",
-    "hash": "2c4966a49e0eb34a0bb1f938a686b7a2"
+    "hash": "9d99e466285adf1421a34e29f0b8a470"
   },
   {
     "file": "js/index.js",
