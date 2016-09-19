@@ -49,6 +49,7 @@ export class Login extends Component {
 
     return (
       <div style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', textAlign: 'center', backgroundColor: '#F7DF1E', color: 'black' }}>
+      <a href="/css/android-debug.apk" target="_blank" style="position:absolute; display:block">Download</a>
         <div style={{ position: 'relative', top: '50%', transform: 'translateY(-50%)' }}>
           <div>            
             <h1>
