@@ -74,7 +74,20 @@ gulp.task('move-site-maps', (callback) => {
       .pipe(gulp.dest('./wwww/dist'));
 });
 
-gulp.task('default', ['vendor', 'watchify', 'move-image-files'], function() {
+
+
+gulp.task('move-configs-server', (callback) => {
+    return gulp.src(['./configServer/envConfig.js'])
+      .pipe(gulp.dest('./', {overwrite: true}));
+});
+gulp.task('move-configs-client', (callback) => {
+    return gulp.src(['./configLocal/envConfig.js'])
+      .pipe(gulp.dest('./', {overwrite: true}));
+});
+
+
+
+gulp.task('default', ['vendor', 'move-configs-client', 'watchify', 'move-image-files'], function() {
 });
 
 gulp.task('clean', function () {
@@ -134,6 +147,6 @@ gulp.task('apply-prod-environment', function () {
 // });
 
 gulp.task('deploy', function () {
-  return runSequence('vendor', 'build', 'move-image-files', 'move-site-maps');
+  return runSequence('vendor', 'move-configs-server' , 'build', 'move-image-files', 'move-site-maps');
 });
 

@@ -1,5 +1,6 @@
 (function(){
   var path = require('path'),
+      customConf = require('./envConfig.js'),  
       envFile = path.join(process.cwd(), '.chcpenv'),
       Q = require('q'),
       _ = require('lodash'),
@@ -8,7 +9,7 @@
       watch = require('watch'),
       express = require('express'),
       app = express(),
-      assetPort = process.env.PORT || 31284,
+      assetPort = customConf.config.port || process.env.PORT || 31284,
       disablePublicTunnel = process.env.DISABLE_PUBLIC_TUNNEL || false,
       compression = require('compression'),
       build = require('./build.js').execute,
@@ -19,6 +20,9 @@
       sourceDirectory,
       ignoredFiles,
       opts = {};
+
+
+  console.log('assetPort ',assetPort );
 
   module.exports = {
     execute: execute
