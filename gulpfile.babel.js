@@ -84,10 +84,17 @@ gulp.task('move-configs-client', (callback) => {
     return gulp.src(['./configLocal/envConfig.js'])
       .pipe(gulp.dest('./', {overwrite: true}));
 });
+gulp.task('move-chcp-server', (callback) => {
+    return gulp.src(['./configServer/chcp.json'])
+      .pipe(gulp.dest('./www/', {overwrite: true}));
+});
+gulp.task('move-chcp-client', (callback) => {
+    return gulp.src(['./configLocal/chcp.json'])
+      .pipe(gulp.dest('./www/', {overwrite: true}));
+});
 
 
-
-gulp.task('default', ['vendor', 'move-configs-client', 'watchify', 'move-image-files'], function() {
+gulp.task('default', ['vendor', 'move-configs-client', 'move-chcp-client', 'watchify', 'move-image-files'], function() {
 });
 
 gulp.task('clean', function () {
@@ -147,6 +154,6 @@ gulp.task('apply-prod-environment', function () {
 // });
 
 gulp.task('deploy', function () {
-  return runSequence('vendor', 'move-configs-server' , 'build', 'move-image-files', 'move-site-maps');
+  return runSequence('vendor', 'move-configs-server' ,'move-chcp-server', 'build', 'move-image-files', 'move-site-maps');
 });
 
