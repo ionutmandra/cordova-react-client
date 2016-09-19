@@ -77,11 +77,11 @@ gulp.task('move-site-maps', (callback) => {
 
 
 gulp.task('move-configs-server', (callback) => {
-    return gulp.src(['./configServer/envConfig.js'])
+    return gulp.src(['./configServer/envConfig.js', './configServer/.chcpenv'])
       .pipe(gulp.dest('./', {overwrite: true}));
 });
 gulp.task('move-configs-client', (callback) => {
-    return gulp.src(['./configLocal/envConfig.js'])
+    return gulp.src(['./configLocal/envConfig.js', './configLocal/.chcpenv'])
       .pipe(gulp.dest('./', {overwrite: true}));
 });
 gulp.task('move-chcp-server', (callback) => {
