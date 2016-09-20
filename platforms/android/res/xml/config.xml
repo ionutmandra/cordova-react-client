@@ -32,7 +32,7 @@
   <allow-intent href="geo:*"/>
   <allow-intent href="market:*"/>
   <chcp>
-    <config-file url="https://3283361e.ngrok.io/chcp.json"/>
+    <config-file url="http://chcp.dnw.ro/chcp.json"/>
     <local-development enabled="true"/>
   </chcp>
   <preference name="loglevel" value="DEBUG"/>
