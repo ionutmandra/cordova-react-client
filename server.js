@@ -50,8 +50,10 @@
       funcs = [];
 
     funcs.push(function(){
-      if (disablePublicTunnel)
-        return customConf.config.pcontentUrl;
+      if (disablePublicTunnel){
+        console.log('disablePublicTunnel is true. Using ', customConf.config.contentUrl);
+        return customConf.config.contentUrl;        
+      }
       
       return publicTunnel(assetPort);
     });
@@ -61,10 +63,11 @@
 
       console.log('pushed2');
 
-      if (!disablePublicTunnel) {
+      //if (!disablePublicTunnel) {
+        console.log('content url', content_url);
         opts.content_url = content_url;
         chcpContext.argv.content_url = content_url;
-      }
+      //}
 
       dfd.resolve();
       return dfd.promise;
