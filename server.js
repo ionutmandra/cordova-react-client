@@ -51,7 +51,7 @@
 
     funcs.push(function(){
       if (disablePublicTunnel)
-        return;
+        return customConf.config.pcontentUrl;
       
       return publicTunnel(assetPort);
     });

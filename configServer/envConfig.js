@@ -3,7 +3,8 @@
   module.exports = {
     config:{
         port:2019,
-        disablePublicTunnel: true
+        disablePublicTunnel: true,
+        contentUrl: 'http://chcp.dnw.ro'
     }
   };
 
